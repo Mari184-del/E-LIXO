@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-LIXO | Lixo Eletrônico e Descarte Correto</title>
+<style>
+  :root { --verde:#1b7a3e; --verde-claro:#e8f5ec; --verde-escuro:#0f4d26; --texto:#222; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--texto); background:#fff; line-height:1.6; }
+  header { background:linear-gradient(135deg,var(--verde),var(--verde-escuro)); color:#fff; padding:56px 20px; text-align:center; }
+  header h1 { margin:0; font-size:3.2rem; letter-spacing:2px; }
+  header p { margin:10px auto 0; max-width:640px; font-size:1.1rem; opacity:.95; }
+  nav { position:sticky; top:0; background:#fff; border-bottom:3px solid var(--verde); z-index:10; text-align:center; }
+  nav a { display:inline-block; padding:14px 16px; color:var(--verde-escuro); text-decoration:none; font-weight:600; }
+  nav a:hover { background:var(--verde-claro); }
+  section { max-width:1000px; margin:0 auto; padding:48px 20px; }
+  h2 { color:var(--verde-escuro); font-size:2rem; margin-top:0; }
+  h3 { color:var(--verde); margin-bottom:6px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+  .card { background:var(--verde-claro); border-radius:14px; padding:22px; border-left:6px solid var(--verde); }
+  .card .icon { font-size:2rem; }
+  .alerta { background:#fff8e1; border-left:6px solid #f9a825; padding:16px 20px; border-radius:10px; margin:24px 0; }
+  .faq details { border-bottom:1px solid #d7e9dc; padding:14px 0; }
+  .faq summary { cursor:pointer; font-weight:600; color:var(--verde-escuro); font-size:1.05rem; }
+  .faq p { margin:10px 0 0; }
+  .mapa-controles { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+  .mapa-controles input, .mapa-controles select { flex:1; min-width:180px; padding:12px; border:2px solid var(--verde); border-radius:10px; font-size:1rem; }
+  button { background:var(--verde); color:#fff; border:none; padding:12px 20px; border-radius:10px; font-size:1rem; cursor:pointer; font-weight:600; }
+  button:hover { background:var(--verde-escuro); }
+  .mapa { background:var(--verde-claro); border-radius:16px; padding:10px; border:2px dashed var(--verde); }
+  svg.brasil { width:100%; height:auto; display:block; }
+  .pino { cursor:pointer; }
+  .pino:hover circle { r:9; }
+  .lista-pontos { margin-top:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+  .ponto { background:#fff; border:1px solid #cfe5d6; border-radius:12px; padding:16px; }
+  .ponto small { color:#555; }
+  .ponto a { color:var(--verde); font-weight:600; }
+  footer { background:var(--verde-escuro); color:#dff3e6; text-align:center; padding:28px 20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>♻️ E-LIXO</h1>
+  <p>Informação para descartar o lixo eletrônico do jeito certo. Cuide do planeta, da sua saúde e do futuro.</p>
+</header>
+
+<nav>
+  <a href="#o-que-e">O que é</a>
+  <a href="#perigos">Perigos</a>
+  <a href="#como-descartar">Como descartar</a>
+  <a href="#mapa">Onde descartar</a>
+  <a href="#faq">Dúvidas</a>
+</nav>
+
+<section id="o-que-e">
+  <h2>O que é lixo eletrônico?</h2>
+  <p>Lixo eletrônico é todo aparelho elétrico ou eletrônico que deixou de funcionar, ficou obsoleto ou foi descartado pelo usuário. Ele é um dos resíduos que mais crescem no mundo.</p>
+  <div class="grid">
+    <div class="card"><div class="icon">📱</div><h3>Celulares e tablets</h3><p>Baterias, telas e circuitos.</p></div>
+    <div class="card"><div class="icon">💻</div><h3>Computadores</h3><p>Notebooks, monitores, teclados, impressoras.</p></div>
+    <div class="card"><div class="icon">🔋</div><h3>Pilhas e baterias</h3><p>Contêm metais pesados muito tóxicos.</p></div>
+    <div class="card"><div class="icon">📺</div><h3>Eletrodomésticos</h3><p>TVs, geladeiras, micro-ondas, liquidificadores.</p></div>
+    <div class="card"><div class="icon">💡</div><h3>Lâmpadas</h3><p>Fluorescentes e LED possuem mercúrio ou componentes eletrônicos.</p></div>
+    <div class="card"><div class="icon">🎧</div><h3>Acessórios</h3><p>Fones, carregadores, cabos, controles remotos.</p></div>
+  </div>
+</section>
+
+<section id="perigos" style="background:#f6fbf7;">
+  <h2>Por que é perigoso?</h2>
+  <p>Quando jogado no lixo comum, o lixo eletrônico pode liberar substâncias nocivas no solo e na água:</p>
+  <ul>
+    <li><strong>Chumbo</strong> – afeta o sistema nervoso e o desenvolvimento infantil.</li>
+    <li><strong>Mercúrio</strong> – contamina rios e peixes, prejudicando o cérebro e os rins.</li>
+    <li><strong>Cádmio</strong> – é cancerígeno e se acumula nos organismos.</li>
+    <li><strong>Retardantes de chama e plásticos</strong> – geram poluição do ar quando queimados.</li>
+  </ul>
+  <div class="alerta"><strong>Dado importante:</strong> o Brasil gera dezenas de milhares de toneladas de lixo eletrônico por ano, e apenas uma pequena parte é reciclada de forma adequada. Ao descartar corretamente, você evita contaminação e ainda permite recuperar ouro, cobre, alumínio e outros materiais.</div>
+</section>
+
+<section id="como-descartar">
+  <h2>Como descartar corretamente</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Não jogue no lixo comum</h3><p>Eletrônicos nunca devem ir para a coleta de lixo doméstico.</p></div>
+    <div class="card"><h3>2. Apague seus dados</h3><p>Faça backup e restaure as configurações de fábrica antes de descartar celulares e computadores.</p></div>
+    <div class="card"><h3>3. Separe as baterias</h3><p>Retire pilhas e baterias removíveis e leve a um ponto específico.</p></div>
+    <div class="card"><h3>4. Leve a um ponto de coleta</h3><p>Use o mapa abaixo para encontrar lojas, prefeituras e ecopontos.</p></div>
+    <div class="card"><h3>5. Doe se ainda funcionar</h3><p>Aparelhos em bom estado podem ter uma segunda vida com ONGs e escolas.</p></div>
+    <div class="card"><h3>6. Compre com consciência</h3><p>Prefira produtos duráveis, com peças substituíveis e garantia longa.</p></div>
+  </div>
+</section>
+
+<section id="mapa" style="background:#f6fbf7;">
+  <h2>Onde descartar</h2>
+  <p>Consulte no mapa os pontos de coleta de lixo eletrônico no Distrito Federal. Antes de ir, confirme diretamente com o estabelecimento se ele recebe o material e verifique os horários de atendimento.</p>
+
+  <div class="mapa" style="padding:0;overflow:hidden;">
+    <iframe
+      src="https://www.google.com/maps?q=ponto+de+coleta+lixo+eletronico+Distrito+Federal&output=embed"
+      width="100%"
+      height="500"
+      style="border:0;display:block;"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - pontos de coleta de lixo eletrônico no Distrito Federal">
+    </iframe>
+  </div>
+</section>
+
+<section id="faq" class="faq">
+  <h2>Dúvidas frequentes</h2>
+  <details open><summary>Posso jogar pilhas no lixo comum?</summary><p>Não. Pilhas e baterias devem ser levadas a pontos de coleta específicos, pois contêm metais pesados.</p></details>
+  <details><summary>Lâmpadas queimadas podem ir no lixo?</summary><p>Não. Lâmpadas fluorescentes contêm mercúrio. Leve-as a pontos de logística reversa.</p></details>
+  <details><summary>E se meu aparelho ainda funciona?</summary><p>Doe para ONGs, escolas ou programas de inclusão digital. Isso prolonga a vida útil e reduz o descarte.</p></details>
+  <details><summary>Preciso apagar meus dados?</summary><p>Sim. Antes de descartar ou doar, remova contas, fotos e senhas, e restaure o aparelho de fábrica.</p></details>
+  <details><summary>Existe lei sobre isso no Brasil?</summary><p>Sim. A Política Nacional de Resíduos Sólidos (Lei 12.305/2010) prevê a logística reversa, que obriga fabricantes e comerciantes a recolher produtos eletrônicos após o uso.</p></details>
+</section>
+
+<footer>
+  <strong>E-LIXO</strong> · Informação para um planeta mais limpo<br>
+  <small>Conteúdo informativo. Confirme horários e endereços antes de ir a um ponto de coleta.</small>
+</footer>
+
+
+</body>
+</html>
